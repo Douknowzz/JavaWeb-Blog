@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <default-config>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost/mydb1</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+    </default-config>
+    <named-config name="myApp">
+        <property name="user">root</property>
+        <property name="password">root</property>
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/myblog?characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=UTC&amp;rewriteBatchedStatements=true </property>
+        <property name="initialPoolSize">10</property>
+        <property name="maxIdleTime">30</property>
+        <property name="maxPoolSize">100</property>
+    </named-config>
+</c3p0-config>
+
+<!--        Xml declaration should precede all document content这个错误原因是代码必须在第一行，空的也不行-->
